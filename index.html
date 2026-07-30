@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebBoost HQ helps growing businesses build stronger search visibility, better websites, and practical digital growth strategies.">
+  <meta name="robots" content="index, follow">
+  <title>WebBoost HQ | Digital Growth & SEO</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#17221f;
+      --muted:#65736f;
+      --paper:#f7f8f3;
+      --mint:#d9f3df;
+      --green:#2d7a57;
+      --lime:#b9e56d;
+      --line:#dce5df;
+      --white:#ffffff;
+      --shadow:0 22px 60px rgba(23,34,31,.10);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"DM Sans",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6}
+    h1,h2,h3,.logo{font-family:"Space Grotesk",sans-serif}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1140px,92%);margin:auto}
+    header{padding:24px 0;position:absolute;top:0;left:0;right:0;z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:1.35rem;font-weight:700;letter-spacing:-.04em}
+    .logo span{color:var(--green)}
+    .navlinks{display:flex;gap:30px;font-size:.92rem;font-weight:600}
+    .navlinks a:hover{color:var(--green)}
+    .navbtn{padding:11px 18px;border:1px solid var(--ink);border-radius:100px;font-size:.9rem;font-weight:700}
+    .hero{min-height:760px;display:grid;grid-template-columns:1.02fr .98fr;gap:55px;align-items:center;padding-top:85px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--mint);color:var(--green);padding:8px 13px;border-radius:100px;font-size:.8rem;font-weight:700;margin-bottom:22px}
+    .dot{width:7px;height:7px;background:var(--green);border-radius:50%}
+    h1{font-size:clamp(3.3rem,6vw,5.6rem);line-height:.98;letter-spacing:-.065em;max-width:700px}
+    h1 em{font-style:normal;color:var(--green)}
+    .hero p{font-size:1.1rem;color:var(--muted);max-width:580px;margin:28px 0}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .primary,.secondary{padding:14px 22px;border-radius:12px;font-weight:700;display:inline-block}
+    .primary{background:var(--ink);color:#fff}
+    .secondary{border:1px solid var(--line);background:#fff}
+    .hero-card{position:relative}
+    .hero-card img{width:100%;height:530px;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}
+    .floating{position:absolute;left:-35px;bottom:35px;background:#fff;border:1px solid var(--line);padding:18px 20px;border-radius:18px;box-shadow:var(--shadow);width:210px}
+    .floating strong{display:block;font-size:1.7rem;font-family:"Space Grotesk"}
+    .floating small{color:var(--muted)}
+    section{padding:105px 0}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}
+    .section-head h2{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.055em;line-height:1}
+    .section-head p{max-width:470px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;min-height:260px;transition:.25s}
+    .service:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .num{font-family:"Space Grotesk";font-weight:700;color:var(--green);margin-bottom:55px}
+    .service h3{font-size:1.35rem;margin-bottom:10px}
+    .service p{color:var(--muted);font-size:.95rem}
+    .feature{background:var(--ink);color:#fff;border-radius:32px;padding:65px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .feature h2{font-size:clamp(2.3rem,4vw,4rem);line-height:1.02;letter-spacing:-.05em}
+    .feature p{color:#b9c5c0;margin:22px 0}
+    .check{display:flex;gap:12px;margin:13px 0;color:#e4ebe7}
+    .check b{color:var(--lime)}
+    .feature img{width:100%;height:380px;object-fit:cover;border-radius:24px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+    .stat{background:#fff;padding:30px}
+    .stat strong{font-family:"Space Grotesk";font-size:2.2rem;display:block}
+    .stat span{color:var(--muted);font-size:.9rem}
+    .cta{background:var(--mint);border-radius:30px;padding:65px;text-align:center}
+    .cta h2{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.06em;line-height:1}
+    .cta p{max-width:590px;margin:18px auto 28px;color:var(--muted)}
+    footer{padding:35px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}
+    @media(max-width:850px){
+      .navlinks{display:none}.hero,.feature{grid-template-columns:1fr}.hero{padding-top:130px}
+      .hero-card img{height:420px}.floating{left:15px}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+      .feature{padding:38px}.section-head{display:block}.section-head p{margin-top:15px}
+    }
+    @media(max-width:560px){
+      h1{font-size:3.2rem}.grid,.stats{grid-template-columns:1fr}.hero{min-height:auto;padding-bottom:70px}
+      section{padding:70px 0}.hero-card img{height:350px}.cta{padding:42px 24px}footer{display:block}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#">WebBoost<span>HQ.</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+      </div>
+      <a class="navbtn" href="#contact">Let's Talk</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="wrap hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Digital growth, made practical</div>
+      <h1>Build visibility.<br><em>Grow with intent.</em></h1>
+      <p>WebBoost HQ helps ambitious businesses improve their online presence through thoughtful SEO, conversion-focused websites, local search, and modern digital marketing.</p>
+      <div class="actions">
+        <a class="primary" href="#contact">Start a project →</a>
+        <a class="secondary" href="#services">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=85" alt="Digital marketing team collaborating around a laptop">
+      <div class="floating">
+        <strong>+ visibility</strong>
+        <small>Strategy built around measurable growth</small>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>What we<br>help improve.</h2>
+        <p>From search visibility to local discovery, we focus on the digital foundations that help a business earn attention and turn it into meaningful action.</p>
+      </div>
+      <div class="grid">
+        <article class="service"><div class="num">01 / SEARCH</div><h3>SEO Strategy</h3><p>Technical, on-page, content, and authority-building work designed to strengthen organic search performance.</p></article>
+        <article class="service"><div class="num">02 / LOCAL</div><h3>Local Visibility</h3><p>Improve how your business appears across local search, maps, location pages, and customer discovery journeys.</p></article>
+        <article class="service"><div class="num">03 / WEB</div><h3>Web Experience</h3><p>Clean, responsive websites with clear messaging, useful structure, and conversion paths that make sense.</p></article>
+        <article class="service"><div class="num">04 / CONTENT</div><h3>Content Systems</h3><p>Build useful topic coverage around the questions, services, and products your audience actually searches for.</p></article>
+        <article class="service"><div class="num">05 / ANALYTICS</div><h3>Performance Tracking</h3><p>Turn search and website data into practical decisions with simple reporting and measurable priorities.</p></article>
+        <article class="service"><div class="num">06 / GROWTH</div><h3>Digital Marketing</h3><p>Connect SEO, content, local marketing, and conversion improvements into one focused growth system.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="feature">
+        <div>
+          <div class="eyebrow">A clearer way forward</div>
+          <h2>Less noise.<br>More useful work.</h2>
+          <p>Good digital marketing is not about doing everything at once. It is about finding the opportunities that matter, executing them well, and learning from the data.</p>
+          <div class="check"><b>✓</b><span>Research before recommendations</span></div>
+          <div class="check"><b>✓</b><span>Prioritized actions instead of endless task lists</span></div>
+          <div class="check"><b>✓</b><span>Search and user experience working together</span></div>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=85" alt="Business team discussing a digital growth strategy">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Built around<br>real progress.</h2>
+        <p>WebBoost HQ takes a practical approach: understand the market, identify gaps, improve the experience, and track what changes.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>SEO</strong><span>Search visibility</span></div>
+        <div class="stat"><strong>Local</strong><span>Nearby discovery</span></div>
+        <div class="stat"><strong>UX</strong><span>Better experiences</span></div>
+        <div class="stat"><strong>Data</strong><span>Smarter decisions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Your next growth move starts here.</h2>
+        <p>Have a website that needs more visibility, stronger local presence, or a clearer digital strategy? Let's turn the opportunities into an actionable plan.</p>
+        <a class="primary" href="mailto:hello@webboosthq.site">hello@webboosthq.site →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <span>© 2026 WebBoost HQ. All rights reserved.</span>
+  <span>Digital Growth • SEO • Web</span>
+</footer>
+
+</body>
+</html>
